@@ -14,8 +14,9 @@
   
   def destroy
     @bookmark = Bookmark.find(params[:id])
+    @bookmark.list = @list
     @bookmark.destroy
-    redirect_to root_path
+    redirect_to list_path(@list)
   end
   
   private
