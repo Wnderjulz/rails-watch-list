@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : asset_path('list_background.jpg') %>">
   <h1><%= @list.name %></h1>
   <p><%= link_to "REMOVE FROM LISTS", list_path(@list), method: :delete, class: 'p-1 mb-2 btn btn-danger' %>
   <%= link_to "BACK TO ALL LISTS", root_path, class: 'p-1 mb-2 btn btn-success' %></p>
